@@ -1,0 +1,22 @@
+<header class="header-container">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo" />
+  </div>
+  <div class="search-bar-container">
+    <input type="text" pInputText placeholder="Search" class="search-bar" />
+  </div>
+  <div class="actions">
+    <button pButton type="button" label="Add" (click)="onAddAccount()"></button>
+    <div class="current-account" (click)="toggleOverlay($event)">
+      <span *ngIf="user$ | async as user">{{ user.username }}</span>
+    </div>
+    <p-overlayPanel #overlay>
+      <button
+        pButton
+        type="button"
+        label="Log Out"
+        (click)="onLogout()"
+      ></button>
+    </p-overlayPanel>
+  </div>
+</header>
