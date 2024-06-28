@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmployeeDataComponent } from './employee-data/employee-data.component';
+import { CountriesComponent } from './countries/countries.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // PrimeNG Modules
@@ -15,11 +18,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ToolbarModule } from 'primeng/toolbar';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { MenuModule } from 'primeng/menu'; // Add MenuModule here
 
 // NGXS Modules
 import { NgxsModule } from '@ngxs/store';
 import { UserState } from './state/user.state';
-import { EmployeeDataComponent } from './employee-data/employee-data.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,14 @@ import { EmployeeDataComponent } from './employee-data/employee-data.component';
     LoginComponent,
     DashboardComponent,
     EmployeeDataComponent,
-    // Add other components here
+    CountriesComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule, // Add ReactiveFormsModule to imports
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ButtonModule,
     CardModule,
@@ -42,7 +46,8 @@ import { EmployeeDataComponent } from './employee-data/employee-data.component';
     ToolbarModule,
     PanelMenuModule,
     OverlayPanelModule,
-    NgxsModule.forRoot([UserState]), // Register NGXS state
+    MenuModule, // Add MenuModule here
+    NgxsModule.forRoot([UserState]),
   ],
   providers: [],
   bootstrap: [AppComponent],
