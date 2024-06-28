@@ -1,1 +1,5 @@
-<p-menu [model]="items"></p-menu>
+<p-tree
+  [value]="nodes"
+  selectionMode="single"
+  (onNodeSelect)="nodeSelect($event)"
+></p-tree>

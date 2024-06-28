@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuItem } from 'primeng/api';
+import { TreeNode } from 'primeng/api';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,33 +8,35 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  items: MenuItem[] = [];
+  nodes: TreeNode[] = [];
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.items = [
+    this.nodes = [
       {
         label: 'Dashboards',
         icon: 'pi pi-fw pi-sitemap',
         expanded: true,
-        items: [
+        children: [
           {
             label: 'Employee Data',
             icon: 'pi pi-fw pi-users',
-            command: () => this.navigateToDashboard('/dashboard/employee-data'),
+            data: { route: '/dashboard/employee-data' },
           },
           {
             label: 'Countries',
             icon: 'pi pi-fw pi-globe',
-            command: () => this.navigateToDashboard('/dashboard/countries'),
+            data: { route: '/dashboard/countries' },
           },
         ],
       },
     ];
   }
 
-  navigateToDashboard(route: string): void {
-    this.router.navigateByUrl(route);
+  nodeSelect(event: any): void {
+    if (event.node.data && event.node.data.route) {
+      this.router.navigateByUrl(event.node.data.route);
+    }
   }
 }
