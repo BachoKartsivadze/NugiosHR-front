@@ -20,6 +20,10 @@ export class EmployeeDataComponent implements OnInit {
         company: 'Nugios',
         city: 'Turkey',
         workType: 'Remote',
+        gender: 'male',
+        marriageStatus: 'married',
+        supervisor: 'Sophie',
+        office: 'Tbilisi',
       },
       {
         name: 'Diana Okujava',
@@ -30,6 +34,10 @@ export class EmployeeDataComponent implements OnInit {
         company: 'Kazunion',
         city: 'Tbilisi',
         workType: 'Remote',
+        gender: 'female',
+        marriageStatus: 'married',
+        supervisor: 'Sophie',
+        office: 'Tbilisi',
       },
       {
         name: 'Bacho Kartsivadze',
@@ -40,6 +48,10 @@ export class EmployeeDataComponent implements OnInit {
         company: 'Nugios',
         city: 'Tbilisi',
         workType: 'Office',
+        gender: 'male',
+        marriageStatus: 'unmarried',
+        supervisor: 'Sophie',
+        office: 'Tbilisi',
       },
       {
         name: 'Amiran Gurgenidze',
@@ -50,7 +62,16 @@ export class EmployeeDataComponent implements OnInit {
         company: 'Rustar',
         city: 'Tbilisi',
         workType: 'Office',
+        gender: 'male',
+        marriageStatus: 'unmarried',
+        supervisor: 'Sophie',
+        office: 'Dubai',
       },
     ];
+
+    // Repeat data to simulate a large dataset
+    for (let i = 0; i < 10; i++) {
+      this.employees = this.employees.concat(this.employees);
+    }
   }
 }

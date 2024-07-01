@@ -19,7 +19,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { TreeModule } from 'primeng/tree';
-import { TableModule } from 'primeng/table'; // Add TableModule here
+import { TableModule } from 'primeng/table';
 
 // NGXS Modules
 import { NgxsModule } from '@ngxs/store';
@@ -48,7 +48,7 @@ import { UserState } from './state/user.state';
     PanelMenuModule,
     OverlayPanelModule,
     TreeModule,
-    TableModule, // Add TableModule here
+    TableModule,
     NgxsModule.forRoot([UserState]),
   ],
   providers: [],

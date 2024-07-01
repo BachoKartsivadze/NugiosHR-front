@@ -7,4 +7,8 @@ export interface Employee {
   company: string;
   city: string;
   workType: string;
+  gender: string;
+  marriageStatus: string;
+  supervisor: string;
+  office: string;
 }
