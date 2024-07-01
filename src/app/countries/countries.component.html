@@ -1,2 +1,18 @@
-<h2>Countries</h2>
-<p>Placeholder content for the Countries dashboard.</p>
+<p-table [value]="countries">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>ISO</th>
+      <th>Country ISO</th>
+      <th>Flag</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-country>
+    <tr>
+      <td>{{ country.name }}</td>
+      <td>{{ country.iso }}</td>
+      <td>{{ country.country_iso }}</td>
+      <td>{{ country.flag }}</td>
+    </tr>
+  </ng-template>
+</p-table>

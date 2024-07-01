@@ -1,8 +1,56 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Employee } from '../models/employee.model';
 
 @Component({
   selector: 'app-employee-data',
   templateUrl: './employee-data.component.html',
   styleUrls: ['./employee-data.component.css'],
 })
-export class EmployeeDataComponent {}
+export class EmployeeDataComponent implements OnInit {
+  employees: Employee[] = [];
+
+  ngOnInit(): void {
+    this.employees = [
+      {
+        name: 'Lasha Kochoradze',
+        email: 'lashakochoradze@gmail.com',
+        phone: '595221025',
+        birthDate: '01/04/1985',
+        age: 35,
+        company: 'Nugios',
+        city: 'Turkey',
+        workType: 'Remote',
+      },
+      {
+        name: 'Diana Okujava',
+        email: 'dianaokujava@gmail.com',
+        phone: '595221025',
+        birthDate: '03/07/1994',
+        age: 25,
+        company: 'Kazunion',
+        city: 'Tbilisi',
+        workType: 'Remote',
+      },
+      {
+        name: 'Bacho Kartsivadze',
+        email: 'bachoqarcivadze@gmail.com',
+        phone: '595221025',
+        birthDate: '02/08/2002',
+        age: 21,
+        company: 'Nugios',
+        city: 'Tbilisi',
+        workType: 'Office',
+      },
+      {
+        name: 'Amiran Gurgenidze',
+        email: 'amirangurgenidze@gmail.com',
+        phone: '595221025',
+        birthDate: '03/02/1986',
+        age: 34,
+        company: 'Rustar',
+        city: 'Tbilisi',
+        workType: 'Office',
+      },
+    ];
+  }
+}

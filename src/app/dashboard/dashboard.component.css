@@ -3,18 +3,19 @@
   flex-direction: column; /* Ensure sidebar is vertical */
   height: 100vh; /* Use full viewport height */
   width: 250px; /* Set a fixed width for sidebar */
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
 }
 
 .router-content {
   flex: 1;
   padding: 1em;
-  background-color: bisque;
+  margin-top: 20px;
+  /* background-color: bisque; */
 }
 
 .whole-dashboard {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: aqua;
+  /* justify-content: space-between;
+  align-items: center; */
+  /* background-color: aqua; */
 }
