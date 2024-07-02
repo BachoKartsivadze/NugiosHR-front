@@ -10,6 +10,7 @@ import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { CountriesComponent } from './countries/countries.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterService } from './services/filter.service'; // Ensure this path is correct
 
 // PrimeNG Modules
 import { ButtonModule } from 'primeng/button';
@@ -51,7 +52,7 @@ import { UserState } from './state/user.state';
     TableModule,
     NgxsModule.forRoot([UserState]),
   ],
-  providers: [],
+  providers: [FilterService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

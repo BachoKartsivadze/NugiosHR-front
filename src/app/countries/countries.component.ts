@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Country } from '../models/country';
+import { FilterService } from '../services/filter.service'; // Adjust path if necessary
 
 @Component({
   selector: 'app-countries',
@@ -7,16 +7,29 @@ import { Country } from '../models/country';
   styleUrls: ['./countries.component.css'],
 })
 export class CountriesComponent implements OnInit {
-  countries: Country[] = [
+  countries: any[] = [
     { name: 'GEO', iso: '00000', country_iso: '00000', flag: 'flag of GEO' },
     { name: 'AZE', iso: '00001', country_iso: '00001', flag: 'flag of AZE' },
     { name: 'UAE', iso: '00002', country_iso: '00002', flag: 'flag of UAE' },
     { name: 'KAZ', iso: '00003', country_iso: '00003', flag: 'flag of KAZ' },
     { name: 'TUR', iso: '00004', country_iso: '00004', flag: 'flag of TUR' },
     { name: 'QAT', iso: '00005', country_iso: '00005', flag: 'flag of QAT' },
-  ];
+  ]; // Replace with actual country data
+  filteredCountries: any[] = [];
 
-  constructor() {}
+  constructor(private filterService: FilterService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.filterService.filter$.subscribe((filter) => {
+      this.applyFilter(filter);
+    });
+  }
+
+  applyFilter(filter: string): void {
+    this.filteredCountries = this.countries.filter((country) =>
+      Object.values(country).some((value: any) =>
+        value.toString().toLowerCase().includes(filter.toLowerCase())
+      )
+    );
+  }
 }

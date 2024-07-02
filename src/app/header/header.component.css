@@ -1,37 +1,31 @@
-.header-container {
+header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  justify-content: center; /* Center the content horizontally */
+  padding: 0 1rem; /* Optional: add some padding */
+  background-color: #f8f9fa; /* Light background for header */
 }
 
-.logo img {
-  height: 40px;
-}
-
-.search-bar-container {
-  flex-grow: 1;
+.header-content {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust this to your preferred max width */
+  justify-content: space-between; /* Space out search bar and buttons */
+  align-items: center; /* Align items vertically in the center */
 }
 
 .search-bar {
-  width: 100%;
-  max-width: 400px; /* Adjust the max-width as needed */
-}
-
-.actions {
+  flex: 1; /* Allow search bar to grow and take up space */
   display: flex;
-  align-items: center;
+  justify-content: center; /* Center the search bar horizontally */
 }
 
-button.p-button {
-  padding: 0.5em 1em; /* Adjust the padding for a smaller button */
+.search-bar p-inputText {
+  width: 100%; /* Make search bar full width of its container */
+  max-width: 600px; /* Set a maximum width for the search bar */
 }
 
-.current-account {
-  margin-left: 20px;
-  cursor: pointer;
+.header-buttons {
+  display: flex;
+  gap: 1rem; /* Add space between buttons */
+  align-items: center; /* Align buttons vertically in the center */
 }

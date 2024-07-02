@@ -1,28 +1,26 @@
-<div class="table-container">
-  <div class="table-scroll-wrapper">
-    <p-table
-      [value]="countries"
-      [paginator]="true"
-      [rows]="14"
-      [resizableColumns]="true"
-      [rowsPerPageOptions]="[10, 25, 50]"
-    >
-      <ng-template pTemplate="header">
-        <tr>
-          <th pResizableColumn>Name</th>
-          <th pResizableColumn>ISO</th>
-          <th pResizableColumn>Country ISO</th>
-          <th pResizableColumn>Flag</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-country let-rowIndex="rowIndex">
-        <tr>
-          <td>{{ country.name }}</td>
-          <td>{{ country.iso }}</td>
-          <td>{{ country.country_iso }}</td>
-          <td>{{ country.flag }}</td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </div>
-</div>
+<p-table
+  [value]="filteredCountries"
+  scrollable="true"
+  [paginator]="true"
+  [rows]="14"
+  [resizableColumns]="true"
+  [rowsPerPageOptions]="[10, 25, 50]"
+  [tableStyle]="{ 'min-width': '75rem' }"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pResizableColumn style="width: 20%">Name</th>
+      <th pResizableColumn style="width: 20%">ISO</th>
+      <th pResizableColumn style="width: 20%">Country ISO</th>
+      <th pResizableColumn style="width: 40%">Flag</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-country>
+    <tr>
+      <td>{{ country.name }}</td>
+      <td>{{ country.iso }}</td>
+      <td>{{ country.countryIso }}</td>
+      <td>{{ country.flag }}</td>
+    </tr>
+  </ng-template>
+</p-table>
