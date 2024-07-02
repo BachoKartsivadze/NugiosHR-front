@@ -1,31 +1,13 @@
-header {
+.header {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  padding: 0 1rem; /* Optional: add some padding */
-  background-color: #f8f9fa; /* Light background for header */
+  justify-content: space-between; /* Center the content horizontally */
+  background-color: rgb(244, 255, 255);
 }
 
-.header-content {
-  display: flex;
-  width: 100%;
-  max-width: 1200px; /* Adjust this to your preferred max width */
-  justify-content: space-between; /* Space out search bar and buttons */
-  align-items: center; /* Align items vertically in the center */
+.add-button {
+  margin-right: 20px;
 }
 
 .search-bar {
-  flex: 1; /* Allow search bar to grow and take up space */
-  display: flex;
-  justify-content: center; /* Center the search bar horizontally */
-}
-
-.search-bar p-inputText {
-  width: 100%; /* Make search bar full width of its container */
-  max-width: 600px; /* Set a maximum width for the search bar */
-}
-
-.header-buttons {
-  display: flex;
-  gap: 1rem; /* Add space between buttons */
-  align-items: center; /* Align buttons vertically in the center */
+  width: 450px;
 }
