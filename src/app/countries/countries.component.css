@@ -1,0 +1,14 @@
+.table-container {
+  width: 100%; /* Full width of the viewport */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrolling */
+  white-space: nowrap; /* Prevent content wrapping */
+}
+
+/* .table-scroll-wrapper {
+  width: 150%; 
+} */
+
+.p-table {
+  min-width: 100%; /* Ensure table takes at least full width of container */
+}
