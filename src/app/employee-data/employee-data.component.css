@@ -12,3 +12,18 @@
 .p-table {
   min-width: 100%; /* Ensure table takes at least full width of container */
 }
+
+td,
+tr {
+  padding: 4px 8px; /* Adjust the padding as needed */
+  height: 35px; /* Adjust the height as needed */
+}
+
+.p-sortIcon {
+  float: right;
+}
+.p-sortable-column .p-sortable-column-icon {
+  margin-left: auto;
+  margin-right: 0;
+  float: right;
+}

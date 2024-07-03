@@ -9,21 +9,57 @@
 >
   <ng-template pTemplate="header">
     <tr>
-      <th pResizableColumn style="width: 20%">Employee Name</th>
-      <th pResizableColumn style="width: 20%">Email</th>
-      <th pResizableColumn style="width: 20%">Phone</th>
-      <th pResizableColumn style="width: 20%">Birth Date</th>
-      <th pResizableColumn style="width: 20%">Age</th>
-      <th pResizableColumn style="width: 20%">Company</th>
-      <th pResizableColumn style="width: 20%">City</th>
-      <th pResizableColumn style="width: 20%">Work Type</th>
-      <th pResizableColumn style="width: 20%">Gender</th>
-      <th pResizableColumn style="width: 20%">Marriage Status</th>
-      <th pResizableColumn style="width: 20%">Supervisor</th>
-      <th pResizableColumn style="width: 20%">Office</th>
+      <th pResizableColumn pSortableColumn="name">
+        Employee Name
+        <p-sortIcon field="name"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="email">
+        Email
+        <p-sortIcon field="email"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="phone">
+        Phone
+        <p-sortIcon field="phone"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="birthDate">
+        Birth Date
+        <p-sortIcon field="birthDate"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="age">
+        Age
+        <p-sortIcon field="age"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="company">
+        Company
+        <p-sortIcon field="company"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="city">
+        City
+        <p-sortIcon field="city"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="workType">
+        Work Type
+        <p-sortIcon field="workType"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="gender">
+        Gender
+        <p-sortIcon field="gender"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="marriageStatus">
+        Marriage Status
+        <p-sortIcon field="marriageStatus"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="supervisor">
+        Supervisor
+        <p-sortIcon field="supervisor"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="office">
+        Office
+        <p-sortIcon field="office"></p-sortIcon>
+      </th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-employee>
+  <ng-template pTemplate="body" let-employee let-rowIndex="rowIndex">
     <tr>
       <td>{{ employee.name }}</td>
       <td>{{ employee.email }}</td>

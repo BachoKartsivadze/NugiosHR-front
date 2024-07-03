@@ -1,7 +1,6 @@
 .header {
   display: flex;
   justify-content: space-between; /* Center the content horizontally */
-  background-color: rgb(244, 255, 255);
 }
 
 .add-button {
