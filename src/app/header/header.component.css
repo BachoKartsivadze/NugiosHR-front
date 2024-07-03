@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between; /* Center the content horizontally */
+  justify-content: space-between;
 }
 
 .add-button {

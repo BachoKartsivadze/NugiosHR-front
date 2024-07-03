@@ -1,22 +1,22 @@
 .table-container {
-  width: 100%; /* Full width of the viewport */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Hide vertical scrolling */
-  white-space: nowrap; /* Prevent content wrapping */
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .table-scroll-wrapper {
-  width: 150%; /* 150% of the container width */
+  width: 150%;
 }
 
 .p-table {
-  min-width: 100%; /* Ensure table takes at least full width of container */
+  min-width: 100%;
 }
 
 td,
 tr {
-  padding: 4px 8px; /* Adjust the padding as needed */
-  height: 35px; /* Adjust the height as needed */
+  padding: 4px 8px;
+  height: 35px;
 }
 
 .p-sortIcon {
