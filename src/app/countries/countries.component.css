@@ -13,3 +13,7 @@
   margin-right: 0;
   float: right;
 }
+
+.name-col {
+  font-weight: 500; /* Light bold */
+}

@@ -27,3 +27,8 @@ tr {
   margin-right: 0;
   float: right;
 }
+
+/* Style for the 'name' column text */
+.name-col {
+  font-weight: 500; /* Light bold */
+}

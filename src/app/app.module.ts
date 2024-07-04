@@ -22,6 +22,8 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { TreeModule } from 'primeng/tree';
 import { TableModule } from 'primeng/table';
 
+import { MultiSelectModule } from 'primeng/multiselect';
+
 // NGXS Modules
 import { NgxsModule } from '@ngxs/store';
 import { UserState } from './state/user.state';
@@ -50,6 +52,7 @@ import { UserState } from './state/user.state';
     OverlayPanelModule,
     TreeModule,
     TableModule,
+    MultiSelectModule,
     NgxsModule.forRoot([UserState]),
   ],
   providers: [FilterService],
