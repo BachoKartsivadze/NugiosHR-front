@@ -8,7 +8,17 @@
     class="search-bar"
   />
   <div class="right-buttons">
-    <button pButton type="button" label="Add" class="add-button"></button>
-    <button pButton type="button" label="John Doe" class="user-button"></button>
+    <p-menubar>
+      <ng-template pTemplate="start">
+        <a class="p-button p-button-text" (click)="toggleDropdown($event)">
+          john doe
+        </a>
+      </ng-template>
+    </p-menubar>
+    <p-overlayPanel #op>
+      <ul>
+        <li (click)="logOut()">Log out</li>
+      </ul>
+    </p-overlayPanel>
   </div>
 </div>

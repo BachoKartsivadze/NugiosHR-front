@@ -21,12 +21,13 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { TreeModule } from 'primeng/tree';
 import { TableModule } from 'primeng/table';
-
 import { MultiSelectModule } from 'primeng/multiselect';
+import { MenubarModule } from 'primeng/menubar';
 
 // NGXS Modules
 import { NgxsModule } from '@ngxs/store';
 import { UserState } from './state/user.state';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,8 @@ import { UserState } from './state/user.state';
     TreeModule,
     TableModule,
     MultiSelectModule,
+    MenuModule,
+    MenubarModule,
     NgxsModule.forRoot([UserState]),
   ],
   providers: [FilterService],
