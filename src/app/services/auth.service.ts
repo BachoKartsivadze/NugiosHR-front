@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { Observable, of } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
-import { User, AccessLevel } from './models/user';
-import { SetUser } from './state/user.state';
+import { User, AccessLevel } from '../models/user';
+import { SetUser } from '../state/user.state';
 
 @Injectable({
   providedIn: 'root',
