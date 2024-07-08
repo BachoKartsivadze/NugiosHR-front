@@ -28,6 +28,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { NgxsModule } from '@ngxs/store';
 import { UserState } from './state/user.state';
 import { MenuModule } from 'primeng/menu';
+import { CompaniesComponent } from './companies/companies.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MenuModule } from 'primeng/menu';
     EmployeeDataComponent,
     CountriesComponent,
     SidebarComponent,
+    CompaniesComponent,
   ],
   imports: [
     BrowserModule,
