@@ -1,1 +1,38 @@
-<p>brands works!</p>
+<p-table
+  [value]="filteredBrands"
+  scrollable="true"
+  [paginator]="true"
+  [rows]="14"
+  [resizableColumns]="true"
+  [rowsPerPageOptions]="[10, 25, 50]"
+  [tableStyle]="{ 'min-width': '75rem' }"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pResizableColumn pSortableColumn="name">
+        Name
+        <p-sortIcon field="name"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="company_count">
+        Company Count
+        <p-sortIcon field="company_count"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="country">
+        Country
+        <p-sortIcon field="country"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="note">
+        Note
+        <p-sortIcon field="note"></p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-brand let-rowIndex="rowIndex">
+    <tr>
+      <td class="name-col">{{ brand.name }}</td>
+      <td>{{ brand.company_count }}</td>
+      <td>{{ brand.country }}</td>
+      <td>{{ brand.Note }}</td>
+    </tr>
+  </ng-template>
+</p-table>

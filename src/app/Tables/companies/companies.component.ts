@@ -52,7 +52,7 @@ export class CompaniesComponent {
       country: 'GB',
     },
   ]; // Replace with actual country data
-  filteredCountries: any[] = [];
+  filteredCimpanies: any[] = [];
 
   constructor(private filterService: FilterService) {}
 
@@ -63,7 +63,7 @@ export class CompaniesComponent {
   }
 
   applyFilter(filter: string): void {
-    this.filteredCountries = this.companies.filter((company) =>
+    this.filteredCimpanies = this.companies.filter((company) =>
       Object.values(company).some((value: any) =>
         value.toString().toLowerCase().includes(filter.toLowerCase())
       )

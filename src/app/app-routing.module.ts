@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDataComponent } from './Tables/employee-data/employee-data.component';
 import { CountriesComponent } from './Tables/countries/countries.component';
 import { CompaniesComponent } from './Tables/companies/companies.component';
+import { BrandsComponent } from './Tables/brands/brands.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'employee-data', component: EmployeeDataComponent },
       { path: 'countries', component: CountriesComponent },
       { path: 'companies', component: CompaniesComponent },
+      { path: 'brands', component: BrandsComponent },
     ],
   },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
