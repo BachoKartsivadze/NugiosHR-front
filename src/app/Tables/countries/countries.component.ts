@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FilterService } from '../services/filter.service'; // Adjust path if necessary
+import { FilterService } from '../../services/filter.service'; // Adjust path if necessary
 
 @Component({
   selector: 'app-countries',

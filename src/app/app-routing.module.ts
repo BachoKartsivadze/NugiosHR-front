@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { EmployeeDataComponent } from './employee-data/employee-data.component';
-import { CountriesComponent } from './countries/countries.component';
-import { CompaniesComponent } from './companies/companies.component';
+import { EmployeeDataComponent } from './Tables/employee-data/employee-data.component';
+import { CountriesComponent } from './Tables/countries/countries.component';
+import { CompaniesComponent } from './Tables/companies/companies.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },

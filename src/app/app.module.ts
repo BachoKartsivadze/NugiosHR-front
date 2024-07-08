@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { EmployeeDataComponent } from './employee-data/employee-data.component';
-import { CountriesComponent } from './countries/countries.component';
+import { EmployeeDataComponent } from './Tables/employee-data/employee-data.component';
+import { CountriesComponent } from './Tables/countries/countries.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterService } from './services/filter.service'; // Ensure this path is correct
@@ -28,7 +28,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { NgxsModule } from '@ngxs/store';
 import { UserState } from './state/user.state';
 import { MenuModule } from 'primeng/menu';
-import { CompaniesComponent } from './companies/companies.component';
+import { CompaniesComponent } from './Tables/companies/companies.component';
+import { BrandsComponent } from './Tables/brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CompaniesComponent } from './companies/companies.component';
     CountriesComponent,
     SidebarComponent,
     CompaniesComponent,
+    BrandsComponent,
   ],
   imports: [
     BrowserModule,

@@ -31,7 +31,7 @@ export class SidebarComponent implements OnInit {
           },
           {
             label: 'Companies',
-            icon: 'pi pi-fw pi-globe',
+            icon: 'pi pi-fw pi-building',
             data: { route: '/dashboard/companies' },
           },
         ],

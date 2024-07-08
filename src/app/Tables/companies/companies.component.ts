@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FilterService } from '../services/filter.service'; // Adjust path if necessary
-import { Company } from '../models/companyModel';
+import { FilterService } from '../../services/filter.service'; // Adjust path if necessary
+import { Company } from '../../models/companyModel';
 
 @Component({
   selector: 'app-companies',
