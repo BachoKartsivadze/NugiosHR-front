@@ -1,7 +1,14 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
+  background: #f8f9fa;
+  width: 100%;
+  height: Hug (43px) px;
+  padding: 4px 7px 4px 7px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #dee2e6;
 }
 
 .add-button {
@@ -9,12 +16,17 @@
 }
 
 .search-bar {
-  width: 450px;
+  width: Fixed (464px) px;
+  height: Hug (32px) px;
+  padding: 4px 16px 4px 12px;
+  gap: 12px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
 }
 
 .logo {
-  width: 90px;
-  height: 50px;
+  width: auto;
+  height: 43px;
   padding-left: 20px;
 }
 

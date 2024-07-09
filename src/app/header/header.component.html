@@ -7,18 +7,4 @@
     (input)="onSearch($event)"
     class="search-bar"
   />
-  <div class="right-buttons">
-    <p-menubar>
-      <ng-template pTemplate="start">
-        <a class="p-button p-button-text" (click)="toggleDropdown($event)">
-          john doe
-        </a>
-      </ng-template>
-    </p-menubar>
-    <p-overlayPanel #op>
-      <ul>
-        <li (click)="logOut()">Log out</li>
-      </ul>
-    </p-overlayPanel>
-  </div>
 </div>

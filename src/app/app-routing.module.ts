@@ -12,8 +12,12 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    children: [{ path: 'employee-data', component: EmployeeDataComponent }],
+  },
+  {
+    path: 'libraries',
+    component: DashboardComponent,
     children: [
-      { path: 'employee-data', component: EmployeeDataComponent },
       { path: 'countries', component: CountriesComponent },
       { path: 'companies', component: CompaniesComponent },
       { path: 'brands', component: BrandsComponent },

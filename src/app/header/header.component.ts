@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { ViewChild } from '@angular/core';
-import { OverlayPanel } from 'primeng/overlaypanel';
 
 @Component({
   selector: 'app-header',
@@ -14,26 +11,12 @@ import { OverlayPanel } from 'primeng/overlaypanel';
 export class HeaderComponent {
   showLogoutButton = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor() {}
 
   @Output() searchChanged = new EventEmitter<string>();
-  @ViewChild('op') overlayPanel: OverlayPanel = {} as OverlayPanel;
 
   onSearch(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.searchChanged.emit(input.value);
-  }
-
-  toggleDropdown(event: Event) {
-    this.overlayPanel.toggle(event);
-  }
-
-  toggleLogout(): void {
-    this.showLogoutButton = !this.showLogoutButton;
-  }
-
-  logOut(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
   }
 }

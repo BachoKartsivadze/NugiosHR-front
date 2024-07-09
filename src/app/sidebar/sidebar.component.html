@@ -1,5 +1,27 @@
-<p-tree
-  [value]="nodes"
-  selectionMode="single"
-  (onNodeSelect)="nodeSelect($event)"
-></p-tree>
+<div class="sidebar-container">
+  <div class="sidebar-header">
+    <img
+      src="path_to_profile_picture"
+      alt="Profile Picture"
+      class="profile-picture"
+    />
+    <div class="user-info">
+      <div class="user-name">Tatia Noniashvili</div>
+      <div class="user-role">
+        Hr&nbsp; <span class="user-company">Rustar Online</span>
+      </div>
+    </div>
+    <div class="logout">
+      <button (click)="logout()">
+        Log Out <i class="pi pi-fw pi-angle-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <p-tree
+    class="p-tree"
+    [value]="nodes"
+    selectionMode="single"
+    (onNodeSelect)="nodeSelect($event)"
+  ></p-tree>
+</div>
