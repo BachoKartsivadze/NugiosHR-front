@@ -1,6 +1,13 @@
+p-sortIcon {
+  float: inline-end;
+}
+
 td,
-tr {
+th {
   padding: 4px 8px;
+}
+
+tr {
   height: 35px;
 }
 

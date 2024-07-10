@@ -17,3 +17,7 @@
 .name-col {
   font-weight: 500; /* Light bold */
 }
+
+p-sortIcon {
+  float: inline-end;
+}

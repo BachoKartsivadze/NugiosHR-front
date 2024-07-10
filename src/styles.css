@@ -13,3 +13,12 @@
     /* CSS to Reset */
   }
 }
+
+.p-tree .p-treenode-content {
+  height: 30px; /* Set the height of the rows to 30px */
+  line-height: 30px; /* Ensure the text is vertically centered */
+}
+
+.p-tree .p-treenode-label {
+  font-size: 14px; /* Smaller font size */
+}

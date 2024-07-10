@@ -1,40 +1,25 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
   background: #f8f9fa;
   width: 100%;
-  height: Hug (43px) px;
-  padding: 4px 7px 4px 7px;
+  height: 43px; /* Adjusted height */
+  padding: 4px 7px;
   gap: 0px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
   border: 1px solid #dee2e6;
 }
 
-.add-button {
-  margin-right: 20px;
-}
-
 .search-bar {
-  width: Fixed (464px) px;
-  height: Hug (32px) px;
+  width: 464px;
+  height: 32px;
   padding: 4px 16px 4px 12px;
   gap: 12px;
   border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
+  margin: auto; /* Center horizontally */
 }
 
 .logo {
-  width: auto;
   height: 43px;
   padding-left: 20px;
-}
-
-.right-buttons {
-  width: 140px;
-}
-
-.logout-button {
-  margin-left: 10px;
-  width: 100px;
 }

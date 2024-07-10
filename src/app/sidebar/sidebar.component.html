@@ -18,10 +18,26 @@
     </div>
   </div>
 
-  <p-tree
-    class="p-tree"
-    [value]="nodes"
-    selectionMode="single"
-    (onNodeSelect)="nodeSelect($event)"
-  ></p-tree>
+  <!-- First Tree for the first 3 rows -->
+  <div class="tree-section-first">
+    <p-tree
+      class="p-tree-first"
+      [value]="firstTreeNodes"
+      selectionMode="single"
+      (onNodeSelect)="nodeSelect($event)"
+    ></p-tree>
+  </div>
+
+  <!-- Divider -->
+  <hr class="tree-divider" />
+
+  <!-- Second Tree for the library row -->
+  <div class="tree-section-second">
+    <p-tree
+      class="p-tree-second"
+      [value]="libraryTreeNodes"
+      selectionMode="single"
+      (onNodeSelect)="nodeSelect($event)"
+    ></p-tree>
+  </div>
 </div>

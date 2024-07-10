@@ -9,12 +9,13 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  nodes: TreeNode[] = [];
+  firstTreeNodes: TreeNode[] = [];
+  libraryTreeNodes: TreeNode[] = [];
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
-    this.nodes = [
+    this.firstTreeNodes = [
       {
         label: 'Dashboard',
         icon: 'pi pi-fw pi-th-large',
@@ -30,6 +31,9 @@ export class SidebarComponent implements OnInit {
         icon: 'pi pi-fw pi-id-card',
         data: { route: '/dashboard/employee-data' },
       },
+    ];
+
+    this.libraryTreeNodes = [
       {
         label: 'Libraries',
         icon: 'pi pi-fw pi-book',
