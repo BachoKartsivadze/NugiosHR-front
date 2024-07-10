@@ -1,10 +1,13 @@
 <div class="header">
   <img src="assets/HR_logo.png" alt="Logo" class="logo" />
-  <input
-    type="text"
-    pInputText
-    placeholder="Search..."
-    (input)="onSearch($event)"
-    class="search-bar"
-  />
+  <div class="search-container">
+    <i class="pi pi-search search-icon"></i>
+    <input
+      type="text"
+      pInputText
+      placeholder="Search..."
+      (input)="onSearch($event)"
+      class="search-bar"
+    />
+  </div>
 </div>
