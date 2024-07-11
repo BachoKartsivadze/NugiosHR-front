@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent {
   loginForm: FormGroup;
   loginFailed: boolean = false;
+  passwordFieldType: string = 'password';
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.loginForm = this.fb.group({
@@ -29,5 +30,10 @@ export class LoginComponent {
     } else {
       this.loginFailed = true;
     }
+  }
+
+  togglePasswordVisibility() {
+    this.passwordFieldType =
+      this.passwordFieldType === 'password' ? 'text' : 'password';
   }
 }

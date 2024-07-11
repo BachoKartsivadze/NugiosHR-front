@@ -1,49 +1,68 @@
 <div class="login-container">
-  <p-card>
-    <ng-template pTemplate="title"> Login </ng-template>
-    <ng-template pTemplate="content">
+  <div class="login-box">
+    <div class="login-left">
+      <img src="assets/HR_LOGO.jpg" alt="Logo" class="logo" />
+      <h2>Log in to your Account</h2>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="p-field">
-          <label for="username">Username</label>
+        <div class="input-group">
+          <label for="email">Email</label>
           <input
-            id="username"
+            id="email"
             type="text"
-            pInputText
             formControlName="username"
+            placeholder="example@gmail.com"
           />
           <div
             *ngIf="
               loginForm.get('username')?.invalid &&
               loginForm.get('username')?.touched
             "
-            class="p-error"
+            class="error"
           >
-            Username is required.
+            Email is required.
           </div>
         </div>
-        <div class="p-field">
+        <div class="input-group">
           <label for="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            pInputText
-            formControlName="password"
-          />
+          <div class="password-container">
+            <input
+              id="password"
+              [type]="passwordFieldType"
+              formControlName="password"
+              placeholder="********"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              (click)="togglePasswordVisibility()"
+            >
+              <i
+                class="pi"
+                [ngClass]="
+                  passwordFieldType === 'password' ? 'pi-eye' : 'pi-eye-slash'
+                "
+              ></i>
+            </button>
+          </div>
           <div
             *ngIf="
               loginForm.get('password')?.invalid &&
               loginForm.get('password')?.touched
             "
-            class="p-error"
+            class="error"
           >
             Password is required.
           </div>
         </div>
-        <button pButton type="submit" label="Login"></button>
-        <div *ngIf="loginFailed" class="p-error">
+
+        <button type="submit" class="login-button">Log in</button>
+        <div *ngIf="loginFailed" class="error">
           Invalid username or password.
         </div>
       </form>
-    </ng-template>
-  </p-card>
+    </div>
+    <div class="login-right">
+      <img src="assets/Web Security.jpg" alt="Login Image" />
+    </div>
+  </div>
 </div>
