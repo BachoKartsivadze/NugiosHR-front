@@ -1,1 +1,42 @@
-<p>teams works!</p>
+<p-table
+  [value]="filteredCimpanies"
+  scrollable="true"
+  [paginator]="true"
+  [rows]="14"
+  [resizableColumns]="true"
+  [tableStyle]="{ 'min-width': '75rem' }"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pResizableColumn pSortableColumn="field_1">
+        Field 1
+        <p-sortIcon field="field_1"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="field_2">
+        Field 2
+        <p-sortIcon field="field_2"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="field_3">
+        Field 3
+        <p-sortIcon field="field_3"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="field_4">
+        Field 4
+        <p-sortIcon field="field_4"></p-sortIcon>
+      </th>
+      <th pResizableColumn pSortableColumn="field_5">
+        Field 5
+        <p-sortIcon field="field_5"></p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
+    <tr>
+      <td class="name-col">{{ item.field_1 }}</td>
+      <td>{{ item.field_2 }}</td>
+      <td>{{ item.field_3 }}</td>
+      <td>{{ item.field_4 }}</td>
+      <td>{{ item.field_5 }}</td>
+    </tr>
+  </ng-template>
+</p-table>

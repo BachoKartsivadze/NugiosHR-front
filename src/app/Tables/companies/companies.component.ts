@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FilterService } from '../../services/filter.service'; // Adjust path if necessary
-import { Company } from '../../models/companyModel';
+import { FilterService } from '../../services/filter.service';
+import { Company } from '../../models/company.model';
 
 @Component({
   selector: 'app-companies',
@@ -51,7 +51,7 @@ export class CompaniesComponent {
       holding_id: '612345',
       country: 'GB',
     },
-  ]; // Replace with actual country data
+  ];
   filteredCimpanies: any[] = [];
 
   constructor(private filterService: FilterService) {}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FilterService } from '../../services/filter.service'; // Adjust path if necessary
+import { Country } from '../../models/country.model';
 
 @Component({
   selector: 'app-countries',
@@ -7,7 +8,7 @@ import { FilterService } from '../../services/filter.service'; // Adjust path if
   styleUrls: ['./countries.component.css'],
 })
 export class CountriesComponent implements OnInit {
-  countries: any[] = [
+  countries: Country[] = [
     { name: 'GEO', iso: '00000', country_iso: '00000', flag: 'flag of GEO' },
     { name: 'AZE', iso: '00001', country_iso: '00001', flag: 'flag of AZE' },
     { name: 'UAE', iso: '00002', country_iso: '00002', flag: 'flag of UAE' },

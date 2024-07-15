@@ -41,7 +41,7 @@ export class AuthService {
               ? this.mockUser
               : this.mockAdmin;
           this.store.dispatch(new SetUser(user));
-          this.router.navigate(['/main']);
+          this.router.navigate(['/main/dashboard']);
         }
         return success;
       })
