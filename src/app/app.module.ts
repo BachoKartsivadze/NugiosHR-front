@@ -30,6 +30,18 @@ import { UserState } from './state/user.state';
 import { MenuModule } from 'primeng/menu';
 import { CompaniesComponent } from './Tables/companies/companies.component';
 import { BrandsComponent } from './Tables/brands/brands.component';
+import { DepartmentClustersComponent } from './Tables/department-clusters/department-clusters.component';
+import { DepartmentsComponent } from './Tables/departments/departments.component';
+import { TeamsComponent } from './Tables/teams/teams.component';
+import { PositionsComponent } from './Tables/positions/positions.component';
+import { RegionsComponent } from './Tables/regions/regions.component';
+import { CitiesComponent } from './Tables/cities/cities.component';
+import { DistrictsComponent } from './Tables/districts/districts.component';
+import { AddressesComponent } from './Tables/addresses/addresses.component';
+import { OfficesComponent } from './Tables/offices/offices.component';
+import { WorkTypeComponent } from './Tables/work-type/work-type.component';
+import { UserRolesComponent } from './Tables/user-roles/user-roles.component';
+import { OrgChartComponent } from './Tables/org-chart/org-chart.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +54,18 @@ import { BrandsComponent } from './Tables/brands/brands.component';
     SidebarComponent,
     CompaniesComponent,
     BrandsComponent,
+    DepartmentClustersComponent,
+    DepartmentsComponent,
+    TeamsComponent,
+    PositionsComponent,
+    RegionsComponent,
+    CitiesComponent,
+    DistrictsComponent,
+    AddressesComponent,
+    OfficesComponent,
+    WorkTypeComponent,
+    UserRolesComponent,
+    OrgChartComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@
   padding: 1px 0px 0px 0px;
   gap: 0px;
   border-right: 1px solid #dee2e6;
+  background-color: #ffffff;
 }
 
 .sidebar-header {
@@ -14,6 +15,7 @@
   height: 70px;
   padding: 8px;
   border-bottom: 1px solid #dee2e6;
+  background-color: #f8f9fa;
 }
 
 .profile-picture {
@@ -60,18 +62,12 @@ hr {
   border-top: 1px solid #ddd;
 }
 
-.tree-section {
+.tree-section-second {
   padding: 0px;
   margin: 0px;
-  background-color: aqua;
+  border-top: none;
 }
 
 .p-tree-first {
   padding-left: 0; /* Align to the left edge */
-}
-
-.tree-divider {
-  margin: 10px 0;
-  border: none;
-  border-top: 1px solid #ddd;
 }

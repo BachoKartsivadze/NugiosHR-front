@@ -28,6 +28,7 @@
   padding-left: 40px; /* Add space for the search icon */
   border-radius: 8px;
   box-sizing: border-box;
+  background: #eeeeee;
 }
 
 .search-icon {

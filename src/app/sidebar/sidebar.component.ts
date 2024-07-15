@@ -24,7 +24,7 @@ export class SidebarComponent implements OnInit {
       {
         label: 'Org. Chart',
         icon: 'pi pi-fw pi-chart-bar',
-        data: { route: '/org-chart' },
+        data: { route: '/dashboard/org-chart' },
       },
       {
         label: 'Employee Data',

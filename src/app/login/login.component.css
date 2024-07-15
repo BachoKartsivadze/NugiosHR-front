@@ -86,7 +86,8 @@ h2 {
   padding: 0;
 }
 /* .options {
-  display: flex;
+  display: flex; 
+  
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
