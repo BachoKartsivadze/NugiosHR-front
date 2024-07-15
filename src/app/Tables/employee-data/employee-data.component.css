@@ -1,16 +1,4 @@
-p-sortIcon {
-  float: inline-end;
-}
-
 td,
 th {
   padding: 4px 8px;
-}
-
-tr {
-  height: 35px;
-}
-
-.name-col {
-  font-weight: 500;
 }
