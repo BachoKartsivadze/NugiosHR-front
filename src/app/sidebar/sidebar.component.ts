@@ -19,17 +19,17 @@ export class SidebarComponent implements OnInit {
       {
         label: 'Dashboard',
         icon: 'pi pi-fw pi-th-large',
-        data: { route: '/dashboard' },
+        data: { route: '/main/dashboard' },
       },
       {
         label: 'Org. Chart',
         icon: 'pi pi-fw pi-chart-bar',
-        data: { route: '/dashboard/org-chart' },
+        data: { route: '/main/org-chart' },
       },
       {
         label: 'Employee Data',
         icon: 'pi pi-fw pi-id-card',
-        data: { route: '/dashboard/employee-data' },
+        data: { route: '/main/employee-data' },
       },
     ];
 

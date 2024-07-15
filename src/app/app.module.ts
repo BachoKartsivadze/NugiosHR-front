@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { MainComponent } from './main/main.component';
 import { EmployeeDataComponent } from './Tables/employee-data/employee-data.component';
 import { CountriesComponent } from './Tables/countries/countries.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -42,13 +42,14 @@ import { OfficesComponent } from './Tables/offices/offices.component';
 import { WorkTypeComponent } from './Tables/work-type/work-type.component';
 import { UserRolesComponent } from './Tables/user-roles/user-roles.component';
 import { OrgChartComponent } from './Tables/org-chart/org-chart.component';
+import { DashboardComponent } from './Tables/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    DashboardComponent,
+    MainComponent,
     EmployeeDataComponent,
     CountriesComponent,
     SidebarComponent,
@@ -66,6 +67,7 @@ import { OrgChartComponent } from './Tables/org-chart/org-chart.component';
     WorkTypeComponent,
     UserRolesComponent,
     OrgChartComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
