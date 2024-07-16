@@ -39,8 +39,16 @@
   float: right;
 }
 
-.name-col {
+.tablecol-name-col {
   font-weight: 500; /* Light bold */
+}
+
+.tablecol {
+  padding-left: 5px;
+}
+
+td {
+  margin-left: 15px;
 }
 
 p-sortIcon {
