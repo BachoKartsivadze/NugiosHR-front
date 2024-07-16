@@ -1,4 +1,38 @@
-<div class="outer-box">
+<div class="table-outer-box">
+  <div class="toolbar">
+    <button
+      pButton
+      type="button"
+      label="Add"
+      class="head-button-outlined-add"
+      (click)="onAdd()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      icon="pi pi-pencil"
+      label="Edit"
+      class="head-button-outlined-rest"
+      (click)="onEdit()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      icon="pi pi-trash"
+      label="Delete"
+      class="head-button-outlined-rest"
+      (click)="onDelete()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      icon="pi pi-lock"
+      label="Access Rights"
+      class="head-button-outlined-rest"
+      (click)="onAccessRights()"
+    ></button>
+  </div>
+
   <p-table
     class="table-container"
     [value]="filteredEmployees"
@@ -10,7 +44,7 @@
     <ng-template pTemplate="header">
       <tr>
         <th pResizableColumn pSortableColumn="name">
-          Employee Name
+          Name
           <p-sortIcon field="name"></p-sortIcon>
         </th>
         <th pResizableColumn pSortableColumn="email">

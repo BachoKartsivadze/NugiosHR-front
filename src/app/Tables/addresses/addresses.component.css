@@ -21,3 +21,7 @@
 p-sortIcon {
   float: inline-end;
 }
+
+::ng-deep .head-button-outlined-rest .p-button-label {
+  font-weight: 400;
+}

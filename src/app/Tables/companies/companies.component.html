@@ -1,42 +1,78 @@
-<p-table
-  [value]="filteredCimpanies"
-  scrollable="true"
-  [paginator]="true"
-  [rows]="14"
-  [resizableColumns]="true"
-  [tableStyle]="{ 'min-width': '75rem' }"
->
-  <ng-template pTemplate="header">
-    <tr>
-      <th pResizableColumn pSortableColumn="name">
-        Name
-        <p-sortIcon field="name"></p-sortIcon>
-      </th>
-      <th pResizableColumn pSortableColumn="company_id">
-        Company ID
-        <p-sortIcon field="company_id"></p-sortIcon>
-      </th>
-      <th pResizableColumn pSortableColumn="country_iso">
-        Country ISO
-        <p-sortIcon field="country_iso"></p-sortIcon>
-      </th>
-      <th pResizableColumn pSortableColumn="holding_id">
-        Holding ID
-        <p-sortIcon field="holding_id"></p-sortIcon>
-      </th>
-      <th pResizableColumn pSortableColumn="country">
-        Country
-        <p-sortIcon field="country"></p-sortIcon>
-      </th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-company let-rowIndex="rowIndex">
-    <tr>
-      <td class="name-col">{{ company.name }}</td>
-      <td>{{ company.company_id }}</td>
-      <td>{{ company.country_iso }}</td>
-      <td>{{ company.holding_id }}</td>
-      <td>{{ company.country }}</td>
-    </tr>
-  </ng-template>
-</p-table>
+<div class="table-outer-box">
+  <div class="toolbar">
+    <button
+      pButton
+      type="button"
+      label="Add"
+      class="head-button-outlined-add"
+      (click)="onAdd()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      icon="pi pi-pencil"
+      label="Edit"
+      class="head-button-outlined-rest"
+      (click)="onEdit()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      icon="pi pi-trash"
+      label="Delete"
+      class="head-button-outlined-rest"
+      (click)="onDelete()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      icon="pi pi-lock"
+      label="Access Rights"
+      class="head-button-outlined-rest"
+      (click)="onAccessRights()"
+    ></button>
+  </div>
+
+  <p-table
+    [value]="filteredCimpanies"
+    scrollable="true"
+    [paginator]="true"
+    [rows]="14"
+    [resizableColumns]="true"
+    [tableStyle]="{ 'min-width': '75rem' }"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th pResizableColumn pSortableColumn="name">
+          Name
+          <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pResizableColumn pSortableColumn="company_id">
+          Company ID
+          <p-sortIcon field="company_id"></p-sortIcon>
+        </th>
+        <th pResizableColumn pSortableColumn="country_iso">
+          Country ISO
+          <p-sortIcon field="country_iso"></p-sortIcon>
+        </th>
+        <th pResizableColumn pSortableColumn="holding_id">
+          Holding ID
+          <p-sortIcon field="holding_id"></p-sortIcon>
+        </th>
+        <th pResizableColumn pSortableColumn="country">
+          Country
+          <p-sortIcon field="country"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-company let-rowIndex="rowIndex">
+      <tr>
+        <td class="name-col">{{ company.name }}</td>
+        <td>{{ company.company_id }}</td>
+        <td>{{ company.country_iso }}</td>
+        <td>{{ company.holding_id }}</td>
+        <td>{{ company.country }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

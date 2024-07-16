@@ -70,4 +70,20 @@ export class DepartmentClustersComponent {
         )
     );
   }
+
+  onAdd(): void {
+    // Function to handle adding an employee
+  }
+
+  onEdit(): void {
+    // Function to handle editing an employee
+  }
+
+  onDelete(): void {
+    // Function to handle deleting an employee
+  }
+
+  onAccessRights(): void {
+    // Function to handle access rights
+  }
 }

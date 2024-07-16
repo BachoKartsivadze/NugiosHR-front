@@ -2,3 +2,7 @@ td,
 th {
   padding: 4px 8px;
 }
+
+::ng-deep .head-button-outlined-rest .p-button-label {
+  font-weight: 400;
+}
