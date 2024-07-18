@@ -36,6 +36,7 @@ import { TeamsComponent } from './Tables/teams/teams.component';
 import { PositionsComponent } from './Tables/positions/positions.component';
 import { RegionsComponent } from './Tables/regions/regions.component';
 import { CitiesComponent } from './Tables/cities/cities.component';
+import { DialogModule } from 'primeng/dialog';
 import { DistrictsComponent } from './Tables/districts/districts.component';
 import { AddressesComponent } from './Tables/addresses/addresses.component';
 import { OfficesComponent } from './Tables/offices/offices.component';
@@ -43,6 +44,7 @@ import { WorkTypeComponent } from './Tables/work-type/work-type.component';
 import { UserRolesComponent } from './Tables/user-roles/user-roles.component';
 import { OrgChartComponent } from './Tables/org-chart/org-chart.component';
 import { DashboardComponent } from './Tables/dashboard/dashboard.component';
+import { AddEmployeeFormComponent } from './views/add-employee-form/add-employee-form.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,7 @@ import { DashboardComponent } from './Tables/dashboard/dashboard.component';
     UserRolesComponent,
     OrgChartComponent,
     DashboardComponent,
+    AddEmployeeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +81,7 @@ import { DashboardComponent } from './Tables/dashboard/dashboard.component';
     ButtonModule,
     CardModule,
     InputTextModule,
+    DialogModule,
     ToolbarModule,
     PanelMenuModule,
     OverlayPanelModule,

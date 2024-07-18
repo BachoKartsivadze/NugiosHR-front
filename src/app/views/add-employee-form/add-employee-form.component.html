@@ -1,0 +1,79 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSave()">
+  <div class="form-grid">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" placeholder="Name" />
+    </div>
+    <div class="form-group">
+      <label for="joinDate">Join Date</label>
+      <input type="date" id="joinDate" formControlName="joinDate" />
+    </div>
+    <div class="form-group">
+      <label for="updateDate">Update Date</label>
+      <input type="date" id="updateDate" formControlName="updateDate" />
+    </div>
+    <div class="form-group">
+      <label for="experience">Experience</label>
+      <input
+        type="text"
+        id="experience"
+        formControlName="experience"
+        placeholder="Placeholder"
+      />
+    </div>
+    <div class="form-group">
+      <label for="supervisor">Supervisor</label>
+      <select id="supervisor" formControlName="supervisor">
+        <option>Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="office">Office</label>
+      <select id="office" formControlName="office">
+        <option>Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="workType">Work Type</label>
+      <select id="workType" formControlName="workType">
+        <option>Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="workState">Work State</label>
+      <select id="workState" formControlName="workState">
+        <option>Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="position">Position</label>
+      <select id="position" formControlName="position">
+        <option>Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="residenceCity">Residence City</label>
+      <select id="residenceCity" formControlName="residenceCity">
+        <option>Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="cancel-button" (click)="onCancel()">
+      Cancel
+    </button>
+    <button type="submit" class="save-button">Save</button>
+  </div>
+</form>

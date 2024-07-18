@@ -10,6 +10,7 @@ import { Employee } from '../../models/employee.model';
 export class EmployeeDataComponent implements OnInit {
   employees: Employee[] = [];
   filteredEmployees: Employee[] = [];
+  displayAddEmployeeDialog: boolean = false;
 
   constructor(private filterService: FilterService) {}
 
@@ -93,15 +94,21 @@ export class EmployeeDataComponent implements OnInit {
   }
 
   onAdd(): void {
-    // Function to handle adding an employee
+    this.displayAddEmployeeDialog = true;
+  }
+
+  onDialogHide(): void {
+    this.displayAddEmployeeDialog = false;
   }
 
   onEdit(): void {
     // Function to handle editing an employee
+    console.log('Edit button clicked for');
   }
 
   onDelete(): void {
     // Function to handle deleting an employee
+    console.log('Delete button clicked for');
   }
 
   onAccessRights(): void {
