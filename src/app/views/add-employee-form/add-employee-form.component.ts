@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Employee } from '../../models/employee.model';
 
 @Component({
   selector: 'app-add-employee-form',
   templateUrl: './add-employee-form.component.html',
   styleUrl: './add-employee-form.component.css',
 })
-export class AddEmployeeFormComponent {
+export class AddEmployeeFormComponent implements OnChanges {
+  @Input() employee: Employee | null = null;
   employeeForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -25,7 +26,22 @@ export class AddEmployeeFormComponent {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['employee'] && this.employee) {
+      this.employeeForm.patchValue({
+        name: this.employee?.name,
+        joinDate: this.employee?.birthDate, // Adjust as needed
+        updateDate: new Date(), // Adjust as needed
+        experience: this.employee?.age, // Adjust as needed
+        supervisor: this.employee?.supervisor,
+        office: this.employee?.office,
+        workType: this.employee?.workType,
+        workState: this.employee?.city, // Adjust as needed
+        position: this.employee?.company, // Adjust as needed
+        residenceCity: this.employee?.city,
+      });
+    }
+  }
 
   onSave(): void {
     console.log(this.employeeForm.value);

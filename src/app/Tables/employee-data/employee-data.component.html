@@ -40,6 +40,10 @@
     [paginator]="true"
     [rows]="21"
     [resizableColumns]="true"
+    selectionMode="single"
+    [(selection)]="selectedEmployee"
+    (onRowSelect)="onRowSelect($event)"
+    (onRowDblClick)="onRowDblClick($event)"
   >
     <ng-template pTemplate="header">
       <tr>
@@ -94,7 +98,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-employee let-rowIndex="rowIndex">
-      <tr>
+      <tr [pSelectableRow]="employee" (dblclick)="onRowDblClick($event)">
         <td class="tablecol-name-col">{{ employee.name }}</td>
         <td class="tablecol">{{ employee.email }}</td>
         <td class="tablecol">{{ employee.phone }}</td>
@@ -112,12 +116,14 @@
   </p-table>
 
   <p-dialog
-    header="Add an Employee"
+    header="Add/Edit Employee"
     [(visible)]="displayAddEmployeeDialog"
     [modal]="true"
     [style]="{ width: '50vw' }"
     (onHide)="onDialogHide()"
   >
-    <app-add-employee-form></app-add-employee-form>
+    <app-add-employee-form
+      [employee]="selectedEmployee"
+    ></app-add-employee-form>
   </p-dialog>
 </div>

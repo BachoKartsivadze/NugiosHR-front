@@ -11,6 +11,7 @@ export class EmployeeDataComponent implements OnInit {
   employees: Employee[] = [];
   filteredEmployees: Employee[] = [];
   displayAddEmployeeDialog: boolean = false;
+  selectedEmployee: Employee | null = null;
 
   constructor(private filterService: FilterService) {}
 
@@ -44,34 +45,6 @@ export class EmployeeDataComponent implements OnInit {
         supervisor: 'Sophie',
         office: 'Tbilisi',
       },
-      {
-        name: 'Bacho Kartsivadze',
-        email: 'bachoqarcivadze@gmail.com',
-        phone: '595221025',
-        birthDate: '02/08/2002',
-        age: 21,
-        company: 'Nugios',
-        city: 'Tbilisi',
-        workType: 'Office',
-        gender: 'male',
-        marriageStatus: 'unmarried',
-        supervisor: 'Sophie',
-        office: 'Tbilisi',
-      },
-      {
-        name: 'Amiran Gurgenidze',
-        email: 'amirangurgenidze@gmail.com',
-        phone: '595221025',
-        birthDate: '03/02/1986',
-        age: 34,
-        company: 'Rustar',
-        city: 'Tbilisi',
-        workType: 'Office',
-        gender: 'male',
-        marriageStatus: 'unmarried',
-        supervisor: 'Sophie',
-        office: 'Dubai',
-      },
     ];
 
     for (let i = 0; i < 10; i++) {
@@ -94,6 +67,7 @@ export class EmployeeDataComponent implements OnInit {
   }
 
   onAdd(): void {
+    this.selectedEmployee = null;
     this.displayAddEmployeeDialog = true;
   }
 
@@ -102,16 +76,32 @@ export class EmployeeDataComponent implements OnInit {
   }
 
   onEdit(): void {
-    // Function to handle editing an employee
-    console.log('Edit button clicked for');
+    if (this.selectedEmployee) {
+      this.displayAddEmployeeDialog = true;
+    } else {
+      console.log('No employee selected');
+    }
   }
 
   onDelete(): void {
-    // Function to handle deleting an employee
-    console.log('Delete button clicked for');
+    if (this.selectedEmployee) {
+      // Function to handle deleting an employee
+      console.log('Delete button clicked for', this.selectedEmployee);
+    } else {
+      console.log('No employee selected');
+    }
   }
 
   onAccessRights(): void {
     // Function to handle access rights
+  }
+
+  onRowSelect(event: any): void {
+    this.selectedEmployee = event.data;
+  }
+
+  onRowDblClick(event: any): void {
+    this.selectedEmployee = event.data;
+    this.displayAddEmployeeDialog = true;
   }
 }
