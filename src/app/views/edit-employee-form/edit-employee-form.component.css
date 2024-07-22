@@ -1,0 +1,59 @@
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-weight: 400;
+}
+
+select {
+  color: #64748b;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.cancel-button,
+.save-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background: none;
+  margin-right: 0.5rem;
+  border: none;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.save-button {
+  background: #64748b;
+  border-radius: 6px;
+  font-weight: 700;
+  border: none;
+  color: white;
+}

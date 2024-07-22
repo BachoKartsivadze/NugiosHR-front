@@ -11,5 +11,6 @@ export interface Employee {
   marriageStatus: string;
   supervisor: string;
   office: string;
-  [key: string]: string | number; // Index signature to allow dynamic keys
+  extraProperties?: { [key: string]: string | number };
+  //[key: string]: string | number;
 }

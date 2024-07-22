@@ -1,6 +1,5 @@
 .sidebar-container {
-  width: Fixed (356px) px;
-  height: Fill (877px) px;
+  height: 877px;
   padding: 1px 0px 0px 0px;
   gap: 0px;
   border: 0px 1px 0px 0px;
@@ -8,8 +7,6 @@
 }
 
 .router-content {
-  width: Fill (1, 560px) px;
-  height: Fill (877px) px;
   padding: 4px 0px 0px 0px;
   gap: 4px;
   opacity: 0px;
@@ -17,4 +14,15 @@
 
 .whole-page {
   display: flex;
+}
+
+.router-content {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.router-content table {
+  width: 100%;
+  min-width: 800px; /* Set a minimum width if needed */
+  height: 100%;
 }

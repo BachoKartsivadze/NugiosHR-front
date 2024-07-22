@@ -115,15 +115,27 @@
     </ng-template>
   </p-table>
 
+  <!-- add dialog -->
   <p-dialog
     header="Add/Edit Employee"
     [(visible)]="displayAddEmployeeDialog"
     [modal]="true"
     [style]="{ width: '50vw' }"
-    (onHide)="onDialogHide()"
+    (onHide)="onAddDialogHide()"
   >
-    <app-add-employee-form
+    <app-add-employee-form></app-add-employee-form>
+  </p-dialog>
+
+  <!-- edit dialog -->
+  <p-dialog
+    header="Edit Employee"
+    [(visible)]="displayEditEmployeeDialog"
+    [modal]="true"
+    [style]="{ width: '50vw' }"
+    (onHide)="onEditDialogHide()"
+  >
+    <app-edit-employee-form
       [employee]="selectedEmployee"
-    ></app-add-employee-form>
+    ></app-edit-employee-form>
   </p-dialog>
 </div>

@@ -45,6 +45,7 @@ import { UserRolesComponent } from './Tables/user-roles/user-roles.component';
 import { OrgChartComponent } from './Tables/org-chart/org-chart.component';
 import { DashboardComponent } from './Tables/dashboard/dashboard.component';
 import { AddEmployeeFormComponent } from './views/add-employee-form/add-employee-form.component';
+import { EditEmployeeFormComponent } from './views/edit-employee-form/edit-employee-form.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { AddEmployeeFormComponent } from './views/add-employee-form/add-employee
     OrgChartComponent,
     DashboardComponent,
     AddEmployeeFormComponent,
+    EditEmployeeFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ export class EmployeeDataComponent implements OnInit {
   employees: Employee[] = [];
   filteredEmployees: Employee[] = [];
   displayAddEmployeeDialog: boolean = false;
+  displayEditEmployeeDialog: boolean = false;
   selectedEmployee: Employee | null = null;
 
   constructor(private filterService: FilterService) {}
@@ -45,6 +46,34 @@ export class EmployeeDataComponent implements OnInit {
         supervisor: 'Sophie',
         office: 'Tbilisi',
       },
+      {
+        name: 'Bacho Kartsivadze',
+        email: 'bachoqarcivadze@gmail.com',
+        phone: '595221025',
+        birthDate: '02/08/2002',
+        age: 21,
+        company: 'Nugios',
+        city: 'Tbilisi',
+        workType: 'Office',
+        gender: 'male',
+        marriageStatus: 'unmarried',
+        supervisor: 'Sophie',
+        office: 'Tbilisi',
+      },
+      {
+        name: 'Amiran Gurgenidze',
+        email: 'amirangurgenidze@gmail.com',
+        phone: '595221025',
+        birthDate: '03/02/1986',
+        age: 34,
+        company: 'Rustar',
+        city: 'Tbilisi',
+        workType: 'Office',
+        gender: 'male',
+        marriageStatus: 'unmarried',
+        supervisor: 'Sophie',
+        office: 'Dubai',
+      },
     ];
 
     for (let i = 0; i < 10; i++) {
@@ -71,13 +100,17 @@ export class EmployeeDataComponent implements OnInit {
     this.displayAddEmployeeDialog = true;
   }
 
-  onDialogHide(): void {
+  onAddDialogHide(): void {
     this.displayAddEmployeeDialog = false;
+  }
+
+  onEditDialogHide(): void {
+    this.displayEditEmployeeDialog = false;
   }
 
   onEdit(): void {
     if (this.selectedEmployee) {
-      this.displayAddEmployeeDialog = true;
+      this.displayEditEmployeeDialog = true;
     } else {
       console.log('No employee selected');
     }

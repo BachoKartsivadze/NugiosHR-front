@@ -1,3 +1,13 @@
 ::ng-deep .head-button-outlined-rest .p-button-label {
   font-weight: 400;
 }
+
+.table-outer-box {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-outer-box table {
+  width: 100%;
+  min-width: 800px; /* Set a minimum width if needed */
+}
