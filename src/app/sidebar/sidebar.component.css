@@ -1,8 +1,6 @@
 .sidebar-container {
   width: 356px;
-  height: auto;
   padding: 1px 0px 0px 0px;
-  gap: 0px;
   border-right: 1px solid #dee2e6;
   background-color: #ffffff;
 }
@@ -21,7 +19,7 @@
 .profile-picture {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 6px;
   margin-right: 10px;
 }
 

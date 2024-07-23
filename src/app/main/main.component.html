@@ -1,9 +1,11 @@
-<app-header (searchChanged)="onSearchChanged($event)"></app-header>
-<div class="whole-page">
-  <div class="sidebar-container">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="router-content">
-    <router-outlet></router-outlet>
+<div class="whole-site">
+  <app-header (searchChanged)="onSearchChanged($event)"></app-header>
+  <div class="whole-page">
+    <div class="sidebar-container">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="router-content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

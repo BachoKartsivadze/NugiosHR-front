@@ -56,19 +56,21 @@ p-sortIcon {
 }
 
 .table-outer-box {
-  padding: 2px 8px 8px 8px;
-  gap: 7px;
-  border-radius: 6px 0px 0px 0px;
-  border: 1px 0px 0px 0px;
+  padding: 2px 0px 0px 4px;
+  border-radius: 6px;
   opacity: 0px;
 }
 
 .toolbar {
-  margin-bottom: 10px;
+  background-color: #ffffff;
+  height: 48px;
 }
 
 .toolbar button {
   margin-right: 10px;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 8px;
 }
 
 .head-button-outlined {

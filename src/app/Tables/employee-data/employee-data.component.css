@@ -11,3 +11,7 @@ th {
   font-weight: 700; /* Change to desired font-weight */
   font-size: 14px; /* Change to desired font-size */
 }
+
+::ng-deep p-sortIcon {
+  color: aliceblue;
+}

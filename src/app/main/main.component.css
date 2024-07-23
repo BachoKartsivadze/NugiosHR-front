@@ -1,15 +1,16 @@
+.whole-site {
+  background-color: #eeeeee;
+  height: fill;
+}
+
 .sidebar-container {
-  height: 877px;
   padding: 1px 0px 0px 0px;
   gap: 0px;
   border: 0px 1px 0px 0px;
-  opacity: 0px;
 }
 
 .router-content {
-  padding: 4px 0px 0px 0px;
-  gap: 4px;
-  opacity: 0px;
+  padding-top: 2px;
 }
 
 .whole-page {
