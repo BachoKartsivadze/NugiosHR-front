@@ -35,12 +35,12 @@
 
   <p-table
     class="table-container"
-    [value]="filteredEmployees"
+    [value]="filteredPersons"
     scrollable="true"
     [rows]="21"
     [resizableColumns]="true"
     selectionMode="single"
-    [(selection)]="selectedEmployee"
+    [(selection)]="selectedPerson"
     (onRowSelect)="onRowSelect($event)"
     (onRowDblClick)="onRowDblClick($event)"
   >
@@ -134,7 +134,7 @@
     (onHide)="onEditDialogHide()"
   >
     <app-edit-employee-form
-      [employee]="selectedEmployee"
+      [employee]="selectedPerson"
     ></app-edit-employee-form>
   </p-dialog>
 </div>

@@ -19,6 +19,7 @@ import { WorkTypeComponent } from './Tables/work-type/work-type.component';
 import { UserRolesComponent } from './Tables/user-roles/user-roles.component';
 import { OrgChartComponent } from './Tables/org-chart/org-chart.component';
 import { DashboardComponent } from './Tables/dashboard/dashboard.component';
+import { PersonalDataComponent } from './Tables/personal-data/personal-data.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -27,6 +28,8 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
+
+      { path: 'personal-data', component: PersonalDataComponent },
 
       { path: 'employee-data', component: EmployeeDataComponent },
 

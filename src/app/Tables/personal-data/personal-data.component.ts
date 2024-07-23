@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FilterService } from '../../services/filter.service';
-import { Employee } from '../../models/employee.model';
-
+import { Person } from '../../models/persons.model';
 @Component({
-  selector: 'app-employee-data',
-  templateUrl: './employee-data.component.html',
-  styleUrls: ['./employee-data.component.css'],
+  selector: 'app-personal-data',
+  templateUrl: './personal-data.component.html',
+  styleUrl: './personal-data.component.css',
 })
-export class EmployeeDataComponent implements OnInit {
-  employees: Employee[] = [];
-  filteredEmployees: Employee[] = [];
+export class PersonalDataComponent {
+  persons: Person[] = [];
+  filteredPersons: Person[] = [];
   displayAddEmployeeDialog: boolean = false;
   displayEditEmployeeDialog: boolean = false;
-  selectedEmployee: Employee | null = null;
+  selectedPerson: Person | null = null;
 
   constructor(private filterService: FilterService) {}
 
   ngOnInit(): void {
-    const initialEmployees: Employee[] = [
+    const initialEmployees: Person[] = [
       {
         name: 'Lasha Kochoradze',
         email: 'lashakochoradze@gmail.com',
@@ -77,10 +76,10 @@ export class EmployeeDataComponent implements OnInit {
     ];
 
     for (let i = 0; i < 10; i++) {
-      this.employees = this.employees.concat(initialEmployees);
+      this.persons = this.persons.concat(initialEmployees);
     }
 
-    this.filteredEmployees = this.employees;
+    this.filteredPersons = this.persons;
 
     this.filterService.filter$.subscribe((filter) => {
       this.applyFilter(filter);
@@ -88,15 +87,15 @@ export class EmployeeDataComponent implements OnInit {
   }
 
   applyFilter(filter: string): void {
-    this.filteredEmployees = this.employees.filter((employee) =>
-      Object.values(employee).some((value: any) =>
+    this.filteredPersons = this.persons.filter((person) =>
+      Object.values(person).some((value: any) =>
         value.toString().toLowerCase().includes(filter.toLowerCase())
       )
     );
   }
 
   onAdd(): void {
-    this.selectedEmployee = null;
+    this.selectedPerson = null;
     this.displayAddEmployeeDialog = true;
   }
 
@@ -109,7 +108,7 @@ export class EmployeeDataComponent implements OnInit {
   }
 
   onEdit(): void {
-    if (this.selectedEmployee) {
+    if (this.selectedPerson) {
       this.displayEditEmployeeDialog = true;
     } else {
       console.log('No employee selected');
@@ -117,9 +116,9 @@ export class EmployeeDataComponent implements OnInit {
   }
 
   onDelete(): void {
-    if (this.selectedEmployee) {
+    if (this.selectedPerson) {
       // Function to handle deleting an employee
-      console.log('Delete button clicked for', this.selectedEmployee);
+      console.log('Delete button clicked for', this.selectedPerson);
     } else {
       console.log('No employee selected');
     }
@@ -130,11 +129,11 @@ export class EmployeeDataComponent implements OnInit {
   }
 
   onRowSelect(event: any): void {
-    this.selectedEmployee = event.data;
+    this.selectedPerson = event.data;
   }
 
   onRowDblClick(event: any): void {
-    this.selectedEmployee = event.data;
+    this.selectedPerson = event.data;
     this.displayEditEmployeeDialog = true;
   }
 }

@@ -46,6 +46,7 @@ import { OrgChartComponent } from './Tables/org-chart/org-chart.component';
 import { DashboardComponent } from './Tables/dashboard/dashboard.component';
 import { AddEmployeeFormComponent } from './views/add-employee-form/add-employee-form.component';
 import { EditEmployeeFormComponent } from './views/edit-employee-form/edit-employee-form.component';
+import { PersonalDataComponent } from './Tables/personal-data/personal-data.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { EditEmployeeFormComponent } from './views/edit-employee-form/edit-emplo
     DashboardComponent,
     AddEmployeeFormComponent,
     EditEmployeeFormComponent,
+    PersonalDataComponent,
   ],
   imports: [
     BrowserModule,
